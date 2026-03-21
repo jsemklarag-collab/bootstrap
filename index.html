@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard (Bootstrap)</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- === SIDEBAR === -->
+
+    <div class="container-fluid">
+      <!-- container-fluid: full width container across the whole screen -->
+      <div class="row">
+        <!-- row: Bootstrap grid row that holds columns -->
+        <!-- *I decided to keep side bar on small screen -->
+        <!-- * used the list container/list item -->
+        <aside class="col-12 col-lg-2 p-0 sidebar">
+          <!-- col-12: 12 columns (100% width) on small screens
+       col-lg-2: large screens and up
+       p-0: padding = 0 -->
+          <nav class="h-100 p-3 navigation">
+            <!-- height = 100% / padding on all sides = level 3 -->
+            <div class="sidebar-header d-flex justify-content-center justify-content-lg-start align-items-center gap-2 mb-3 mb-lg-4">
+              <!-- d-flex: display flex
+           justify-content-center: horizontally center items
+           justify-content-lg-start: on large screens, align items to the left
+           align-items-center: vertically center items
+           gap-2: small space between flex items
+           mb-3: margin-bottom level 3
+           mb-lg-4: on large screens margin-bottom level 4 -->
+
+              <span class="sidebar-title">Dashboard Kit</span>
+            </div>
+
+            <ul class="nav flex-row flex-wrap flex-lg-column justify-content-center justify-content-lg-start gap-2">
+              <!-- flex-row: items arranged horizontally (row)
+           flex-wrap: items can wrap to the next line if needed
+           flex-lg-column: on large screens, items become vertical (column)
+           justify-content-center: center items horizontally
+           justify-content-lg-start: on large screens, align items to the start (left/top)
+           gap-2: small space between items -->
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <!-- d-flex: sets display flex
+               align-items-center: vertically centers items inside the flex container
+               gap-2: small space between the items -->
+                  <i class="bi bi-pie-chart-fill"></i>
+                  Overview
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-ticket-perforated"></i>
+                  Tickets
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-lightbulb"></i>
+                  Ideas
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-people"></i>
+                  Contacts
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-person"></i>
+                  Agents
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-newspaper"></i>
+                  Articles
+                </a>
+              </li>
+
+              <li><hr /></li>
+
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-gear"></i>
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a class="d-flex align-items-center gap-2" href="#">
+                  <i class="bi bi-person-badge-fill"></i>
+                  Subscription
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="col-12 col-lg-10 main-content">
+          <!-- === OVERVIEW === -->
+          <header class="d-flex align-items-center justify-content-between mb-4 page-header">
+            <h1>Overview</h1>
+
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-search"></i>
+              <i class="bi bi-bell"></i>
+              <p class="user-name">Klara Galova</p>
+              <img class="avatar" src="images/profilephoto.png" alt="User avatar" />
+            </div>
+          </header>
+
+          <!-- === CARDS === -->
+
+          <section class="row g-3 mb-4">
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="panel panel-cards p-3">
+                <p>Unresolved</p>
+                <p>60</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="panel panel-cards p-3">
+                <p>Overdue</p>
+                <p>16</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="panel panel-cards p-3">
+                <p>Open</p>
+                <p>43</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <article class="panel panel-cards p-3">
+                <p>On hold</p>
+                <p>64</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- === TODAY'S TRENDS PANEL === -->
+
+          <section class="mb-4">
+            <article class="panel bg-white rounded-3">
+              <div class="row g-0">
+                <div class="col-12 col-lg-8">
+                  <div class="p-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
+                      <div>
+                        <h2 class="h5 mb-1">Today's trends</h2>
+                        <p class="text-secondary small mb-0">as of 21 March 2026, 09:41 PM</p>
+                      </div>
+
+                      <div class="trend-legend d-flex gap-4 mt-3 mt-md-0">
+                        <span class="legend-item legend-today text-secondary small">Today</span>
+                        <span class="legend-item legend-yeterday text-secondary small">Yesterday</span>
+                      </div>
+                    </div>
+
+                    <div class="trends-chart">
+                      <img src="images/graph.png" alt="Graph" class="img-fluid w-100 h-100"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-4 trends-side">
+                  <div class="h-100 d-flex flex-column">
+                    <div class="trend-stat p-4">
+                      <p class="text-secondary mb-1">Resolved</p>
+                      <p class="mb-0 fw-semibold fs-4">449</p>
+                    </div>
+                    <div class="trend-stat p-4">
+                      <p class="text-secondary mb-1">Received</p>
+                      <p class="mb-0 fw-semibold fs-4">426</p>
+                    </div>
+                    <div class="trend-stat p-4">
+                      <p class="text-secondary mb-1">Average first response time</p>
+                      <p class="mb-0 fw-semibold fs-4">33m</p>
+                    </div>
+                    <div class="trend-stat p-4">
+                      <p class="text-secondary mb-1">Average response time</p>
+                      <p class="mb-0 fw-semibold fs-4">3h 8m</p>
+                    </div>
+                    <div class="trend-stat p-4">
+                      <p class="text-secondary mb-1">Resolution within SLA</p>
+                      <p class="mb-0 fw-semibold fs-4">94%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- === TICKETS === -->
+
+          <section class="row g-4">
+            <div class="col-12 col-lg-6">
+              <article class="panel h-100 p-4 list-panel">
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                  <div>
+                    <h2>Unresolved tickets</h2>
+                    <p class="muted">Group: <span>Support</span></p>
+                  </div>
+                  <a href="#">View details</a>
+                </div>
+
+                <div class="row-line py-3 d-flex justify-content-between">
+                  <span>Waiting on Feature Request</span>
+                  <span class="muted">4238</span>
+                </div>
+                <div class="row-line py-3 d-flex justify-content-between">
+                  <span>Awaiting Customer Response</span>
+                  <span class="muted">1005</span>
+                </div>
+                <div class="row-line py-3 d-flex justify-content-between">
+                  <span>Awaiting Developer Fix</span>
+                  <span class="muted">914</span>
+                </div>
+                <div class="row-line py-3 d-flex justify-content-between">
+                  <span>Pending</span>
+                  <span class="muted">281</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- === TASKS === -->
+            <!-- *Badges - copied bootstrap but changed the classes, because bootstrap classes make default colors, for example bg-danger makes it red, but we need yellow -->
+
+            <div class="col-12 col-lg-6">
+              <article class="panel h-100 p-4 list-panel">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h2>Tasks</h2>
+                    <p class="muted">Today</p>
+                  </div>
+                  <a href="#">View all</a>
+                </div>
+
+                <div class="row-line py-3 d-flex justify-content-between align-items-center">
+                  <span>Create new task</span>
+                  <button class="add-task" type="button">+</button>
+                </div>
+
+                <div class="row-line py-3 d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-3">
+                    <input type="radio" />
+                    <span>Finish ticket update</span>
+                  </div>
+                  <span class="badge bg-urgent">URGENT</span>
+                </div>
+
+                <div class="row-line py-3 d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-3">
+                    <input type="radio" />
+                    <span>Create new ticket example</span>
+                  </div>
+                  <span class="badge bg-new">NEW</span>
+                </div>
+
+                <div class="row-line py-3 d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-3">
+                    <input type="radio" />
+                    <span>Update ticket report</span>
+                  </div>
+                  <span class="badge bg-default">DEFAULT</span>
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <!-- === JS bootstrap === -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
