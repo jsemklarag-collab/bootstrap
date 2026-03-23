@@ -1,0 +1,14 @@
+
+{
+  "name": "klara_galova_ff",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "lite-server --baseDir=public"
+  },
+  "author": "Klara Galova",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
